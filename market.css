@@ -1,0 +1,533 @@
+/* default style */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-image: url('./images/onlineshopping.png');
+    /* background: linear-gradient(180deg, #444444, #757575); */
+    width: 100%;
+    height: 150vh;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header .header-logo{
+    width: 250px;
+    height: 50px;
+}
+header .header-logo img{
+    width: 100%;
+    height: 100%;
+    font-size: 100px;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+header .sale{
+    width: 650px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+header .sale h1:nth-child(1){
+    color: #ccc;
+    font-size: 75px;
+    letter-spacing: 1.2px;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-top: 50px;
+}
+header .sale h1:nth-child(2){
+    color: #ccc;
+    font-size: 75px;
+    letter-spacing: 1.2px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+header .sale p{
+    color: #ccc;
+    font-size: 18px;
+    margin-top: 8px;
+    letter-spacing: 0.8px;
+}
+header .sale button{
+    width: 300px;
+    height: 60px;
+    border: none;
+    border-radius: 35px;
+    margin-top: 20px;
+    background-color: #00A87E;
+}
+header .sale button a{
+    text-decoration: none;
+    font-size: 22px;
+    color: #ccc;
+}
+/* ====Media For Header ===== */
+@media (min-width: 768px) and (max-width: 911px) {
+    header{
+        background-image: cover;
+        width: 100%;
+        height: 100vh;
+    }
+    header .header-logo img{
+        font-size: 140px;
+        margin-top: 10px;
+        width: 50%;
+        height: 50%;
+        /* margin-bottom: 20px; */
+    }
+    header .sale h1:nth-child(1){
+        color: #ccc;
+        font-size: 55px;
+        letter-spacing: 1px;
+        font-family: sans-serif;
+        font-weight: 600;
+        margin-top: -50px;
+    }
+    header .sale h1:nth-child(2){
+        color: #ccc;
+        font-size: 55px;
+        letter-spacing: 1px;
+        font-family: sans-serif;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+    header .sale p{
+        color: #ccc;
+        font-size: 16px;
+        margin-top: 5px;
+        letter-spacing: 0.4px;
+    }
+    header .sale button{
+        width: 200px;
+        height: 40px;
+        border: none;
+        border-radius: 35px;
+        margin-top: 20px;
+        background-color: #00A87E;
+    }
+    header .sale button a{
+        text-decoration: none;
+        font-size: 18px;
+        color: #ccc;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.9px) {
+    header{
+        background-image: cover;
+        width: 100vw;
+        height: 100vh;
+    }
+    header .header-logo img{
+        font-size: 100px;
+        margin-top: 10px;
+        width: 50%;
+        height: 50%;
+        /* margin-bottom: 20px; */
+    }
+    header .sale{
+        width: 500px;
+        height: 300px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    header .sale h1:nth-child(1){
+        color: #ccc;
+        font-size: 45px;
+        letter-spacing: 0.5px;
+        font-family: sans-serif;
+        font-weight: 600;
+        margin-top: 60px;
+    }
+    header .sale h1:nth-child(2){
+        color: #ccc;
+        font-size: 45px;
+        letter-spacing: 0.2px;
+        font-family: sans-serif;
+        font-weight: 550;
+        /* margin-top: -120px; */
+    }
+}
+@media (min-width: 300px) and (max-width: 575.9px) {
+    header{
+        background-image: cover;
+        width: 100vw;
+        height: 100vh;
+    }
+    header .header-logo img{
+        font-size: 140px;
+        margin-top: 5px;
+        width: 60%;
+        height: 60%;
+        margin-bottom: 40px;
+    }
+    header .sale{
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    header .sale h1:nth-child(1){
+        color: #ccc;
+        font-size: 30px;
+        letter-spacing: 0.2px;
+        font-family: sans-serif;
+        font-weight: 500;
+        margin-top: 20px;
+        margin-top: 50px;
+    }
+    header .sale h1:nth-child(2){
+        color: #ccc;
+        font-size: 27px;
+        letter-spacing: 0.2px;
+        font-family: sans-serif;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+    header .header-logo{
+        margin: auto;
+    }
+    header .sale p{
+        color: #ccc;
+        font-size: 15px;
+        margin-top: 10px;
+        letter-spacing: 0.2px;
+        text-align: center;
+    }
+    header .sale button{
+        width: 150px;
+        height: 40px;
+    }
+    header .sale button a{
+        font-size: 16px;
+    }
+}
+/* =========Main Begin ======== */
+main{
+    background-color: #fff;
+}
+main .main-title{
+    margin-top: 90px;
+    text-align: center;
+}
+main .main-title h1{
+    color: #000;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+main .main-part{
+    width: 100%;
+    height: 100%;
+    display: flex;  
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    /* overflow: auto; */
+    /* position: relative; */
+}
+main .main-part .img-title{
+    width: 300px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main .main-part .img-title .card-img{
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+main .main-part .img-title .card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+main .main-part .img-title .page-title{
+    width: 80%;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+main .main-part .img-title .page-title h2{
+    font-size: 18px;
+    font-family: sans-serif;
+    padding: 20px 0;
+}
+main .main-part .img-title .page-title p{
+    line-height: 24px;
+}
+.btn-create{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    position: inherit;
+    /* margin-top: 50px; */
+}
+.btn-create button{
+    border: none;
+    width: 300px;
+    height: 60px;
+    border: none;
+    border-radius: 35px;
+    background-color: #00A87E;
+    margin-top: 20px;
+}
+.btn-create button a{
+    text-decoration: none;
+    font-size: 22px;
+    color: #fff;
+}
+
+/* ======Media for Main Part ======= */
+
+
+@media (min-width: 300px) and (max-width: 768px){
+    .btn-create button{
+        border: none;
+        width: 220px;
+        height: 50px;
+        border: none;
+        border-radius: 25px;
+        background-color: #00A87E;
+    }
+    .btn-create button a{
+        text-decoration: none;
+        font-size: 19px;
+        color: #fff;
+    }
+    main .main-title h1{
+        color: #000;
+        font-size: 40px;
+        font-weight: 600;
+        font-family: sans-serif;
+    }
+}
+
+/* ===== About section BEGIN ====== */
+.about{
+    background-color: #FAFAFA;
+    height: 60vh;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.about .header-page{
+    text-align: center;
+    position: absolute;
+}
+.about .header-page h1{
+    font-size: 30px;
+    font-style: italic;
+    font-family: sans-serif;
+    margin-top: 15px;
+    padding: 0 10px;
+}
+.about .header-page .p1{
+    margin-top: 80px;
+    color: #000;
+    font-family: sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+.about .header-page .p2{
+    margin-top: 10px;
+    color: #000;
+    font-family: sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+.about .header-page .p2 a{
+    color: #000;
+}
+
+/*===========About MEDIA===========  */
+    @media (min-width: 768px) and (max-width: 911px) {
+        .about .header-page h1{
+            font-size: 28px;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.9px) {
+        .about .header-page h1{
+            font-size: 24px;
+        }
+       
+    }
+    @media (min-width: 0px) and (max-width: 575.9px) {
+        .about .header-page h1{
+            font-size: 20px;
+        }
+        .about .header-page .p1{
+            margin-top: 80px;
+            color: #000;
+            font-family: sans-serif;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            font-size: 14px;
+        }
+        .about .header-page .p2{
+            margin-top: 10px;
+            color: #000;
+            font-family: sans-serif;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            font-size: 14px;
+        }
+       
+    }
+
+/* ====== Weatheer section Begins */
+.weather{
+    background-color: #000;
+    height: 80vh;
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.weather .main-page{
+    text-align: center;
+}
+.weather .main-page h1{
+    font-size: 45px;
+    font-family: sans-serif;
+    margin-top: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+/* ====== Media for Weather */
+@media (min-width: 768px) and (max-width: 911px) {
+    .weather .main-page h1{
+        font-size: 40px;
+        font-family: sans-serif;
+        margin-top: 20px;
+        color: #fff;
+        letter-spacing: 1px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.9px) {
+    .weather .main-page h1{
+        font-size: 32px;
+        font-family: sans-serif;
+        margin-top: 20px;
+        color: #fff;
+        letter-spacing: 1px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+@media (min-width: 0px) and (max-width: 575.9px) {
+    .weather .main-page h1{
+        font-size: 25px;
+        font-family: sans-serif;
+        margin-top: 20px;
+        color: #fff;
+        letter-spacing: 1px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* ===== Footer section Begins */
+.footer{
+    background-color: #fff;
+    /* width: 100%; */
+    height: 35vh;
+}
+.footer .flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    padding: 0 15px;
+
+}
+.footer .img-section{
+    width: 100px;
+    height: 30px;
+}
+.footer .img-section img{
+    width: 100%;
+    height: 100%;
+    font-size: 100px;
+    margin-right: 10px;
+}
+.footer .line{
+    width: 1px;
+    height: 30px;
+    background-color: #000;
+    margin: 0 20px;
+}
+.footer .footer-paragraph{
+    margin-top: 30px;
+}
+.footer .footer-paragraph p{
+    font-size: 19px;
+    font-weight: 300;
+    font-family: sans-serif;
+    color: rgb(94, 94, 94);
+}
+.footer .created{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 110px;
+}
+.footer .created p{
+    font-size: 18px;
+    color: #4e4e4e;
+    font-family: sans-serif;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.footer .created p:hover{
+    color: #ccc;
+}
+/* ========= Media for footer ====== */
+@media screen and (max-width: 576px){
+    .footer .img-section{
+        width: 70px;
+        height: 23px;
+    }
+    .footer .img-section img{
+        width: 100%;
+        height: 100%;
+        font-size: 70px;
+        margin-right: 10px;
+    }
+    .footer .created p{
+        font-size: 16px;
+        color: #4e4e4e;
+        font-family: sans-serif;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        transition: all 0.3s linear;
+    }
+}

@@ -1,0 +1,306 @@
+/* default style */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+}
+/* ======= Container Begins */
+.container{
+    background-color: #fff;
+}
+.container .flex-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.container .flex-1 .logo{
+    width: 100px;
+    height: 40px;
+}
+.container .flex-1 .logo img{
+    width: 100%;
+    height: 100%;
+    font-size: 80px;
+}
+.container .flex-1 .prev{
+    width: 70px;
+    height: 70px;
+}
+.container .flex-1 .prev span{
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    font-weight: 100;
+}
+.container .flex-1 .prev span a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 50;
+    font-family: sans-serif;
+}
+.container .flex-1 .header-page {
+    margin-top: 10px;
+}
+.container .flex-1 .header-page h1{
+    font-size: 50px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: 550;
+}
+.container .flex-2{
+    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .flex-2 .header-page{
+    margin-top: 20px;
+    text-align: center;
+}
+/* =========== Media for H1 ======= */
+@media screen and (max-width: 911px) {
+    .container .flex-1 .header-page  {
+        display: none;
+    }
+    .container .flex-2 .header-page{
+        display: block;
+    }
+}
+@media (min-width: 911.1px) and (max-width: 1700px) {
+    .container .flex-1 .header-page  {
+        display: block;
+    }
+    .container .flex-2 .header-page{
+        display: none;
+    }
+}
+.container .flex-1 .header-page p{
+    font-size: 18px;
+    margin-top: 15px;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+}
+.container .flex-1 .header-page p a{
+    text-decoration: none;
+    color: #4285F4;
+    font-weight: 200;
+    letter-spacing: 0.7px;
+}
+/* ====== Container End */
+
+
+/* ==========MAIN BEGINS ===========*/
+.main{
+    display: flex;
+    /* margin-top: 10px; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.main .register{
+    width: 600px;
+    /* height: 400px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main .register form{
+    width: 70%;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.main .register form input{
+    border: none;
+    outline: none;
+    padding-top: 12px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-size: 20px;
+    color: #424242;
+}
+.main .register form label{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+.main .register form label::after{
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    border: 2px solid #4285F4;
+    transform: translateX(-100%);
+    width: 100%;
+    transition: all 0.4s linear;
+}
+.main .register form label .name{
+    position: absolute;
+    bottom: 5px;
+    font-size: 18px;
+    left: 0;
+    font-weight: 300;
+    font-family: sans-serif;
+    color: #ccc;
+    transition: all 0.3s linear;
+}
+.main .register form input:focus + label .name,
+.main .register form input:valid + label .name
+{
+    transform: translateY(-120%);
+    font-size: 15px;
+    color: #4285F4;
+}
+.main .register form input:focus + label::after,
+.main .register form input:valid + label::after{
+    transform: translateX(0);
+}
+.main .line{
+    width: 1px;
+    height: 350px;
+    margin-right: 20px;
+    background-color: #424242;
+}
+/* ========== Media for Line ========== */
+
+@media screen and (max-width: 1424px){
+    .main .line{
+        display: none;
+    }
+}
+.main .btn-create{
+    margin-top: 20px;
+}
+.main .btn-create button{
+    border: 1px solid #4285F4;
+    border-radius: 25px;
+    padding: 12px 40px;
+    color: #4285F4;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+.main .btn-create button:hover{
+    background-color: #4285F4;
+}
+.main .btn-create button a{
+    font-size: 16px;
+    color: #4285F4;
+    text-decoration: none;
+    transition: all 0.15s linear;
+}
+.main .btn-create button a:hover{
+    color: #fff;
+}
+.main .social{
+    width: 550px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px solid; */
+}
+.main .social .facebook{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #3B5998;
+    width: 300px;
+    height: 50px;
+    margin-top: 15px;
+}
+.main .social .facebook .face-icon{
+    /* border: 1px solid; */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3B5998;
+}
+.main .social .facebook .face-icon a{
+    font-size: 25px;
+}
+.main .social .facebook .face-icon a i{
+    color: #3B5998;
+}
+.main .social .facebook .face-word{
+    width: 250px;
+    height: 50px;
+    background-color: #3B5998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .social .facebook .face-word p{
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.6px;
+}
+.main .social .Google{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #4285F4;
+    width: 300px;
+    height: 50px;
+    margin-top: 15px;
+}
+.main .social .Google .gog-icon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3B5998;
+}
+.main .social .Google .gog-icon a{
+    font-size: 25px;
+}
+.main .social .Google .gog-icon a i{
+    color: #4285F4;
+}
+.main .social .Google .gog-word{
+    width: 250px;
+    height: 50px;
+    background-color: #4285F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .social .Google .gog-word p{
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.6px;
+}
+/* =======Footer Begins */
+.footer{
+    width: 700px;
+    margin: auto;
+    margin-top: 30px;
+}
+.footer p{
+    text-align: center;
+    font-family: sans-serif;
+    color: #909090;
+    font-size: 15px;
+}
+.footer .horizontal{
+    color: #909090;
+    margin: 10px auto;
+    width: 90%;
+}
+.footer p span{
+    color: #4285F4;
+}

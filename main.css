@@ -1,0 +1,815 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+/* default style */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+div{
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+/* ======== Header========= */
+.header{
+    background-image: url('./images/abdul-a-0si69BeGjoI-unsplash.jpg');
+    height: 100vh;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+    padding: 9vh 0;
+    position: fixed;
+    position: relative;
+    z-index: 99;
+}
+nav .logo a{
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.nav_link{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 32%;
+
+}
+.nav_link li{
+    list-style: none;
+    transition: all 0.5s linear;
+    
+}
+.nav_link li:hover{
+    text-decoration: underline;
+    color: #111;
+}
+.nav_link li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 520;
+}
+.burger{
+    display: none;
+}
+.burger div{
+    height: 3px;
+    width: 35px;
+    background-color: #fff;
+    margin-top: 5px;
+    transition: all 0.4s linear;
+}
+/* Media for Header part */
+@media screen and (max-width: 1200px){
+    body{
+        overflow: hidden;
+    }
+    .nav_link{
+        position: absolute;
+        width: 30%;
+        height: 70vh;
+        right: 2vw;
+        top: 12vh;
+        display: flex;
+        border-radius: 15px;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(rgb(204, 109, 130), #fff );
+        opacity: 0;
+    }
+    .nav_link li a{
+        color: #111;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .burger{
+       display: block;
+    }
+}
+/* JavaScript */
+.active{
+    opacity: 1;
+    transition: all 0.8s linear;
+    color: #909090;
+}
+.toggle .line2{
+    transform: rotate(-45deg) translate( 5px, 1px);
+}
+.toggle .line1{
+  opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -10px);
+
+}
+/* ======== Main============= */
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 80vh;
+}
+main .content{
+    position: absolute;
+    text-align: center;
+}
+main .content h2{
+    font-size: 45px;
+    letter-spacing: 3px;
+    color: #fff;
+    font-weight: 700;
+}
+main .content .content_title{
+   position: relative;
+   max-height: 70px;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+main .content .content_title p{
+    color: rgb(9, 89, 114);
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 1px;
+}
+main .content .content_title p:nth-child(1){
+    animation: content_animation 8s infinite;
+}
+/* Media for content_title */
+@keyframes content_animation {
+    0%{
+        margin-top: 0;
+    }
+    25%{
+        margin-top: -70px;
+    }
+    50%{
+        margin-top: -140px;
+    }
+    75%{
+        margin-top: -70px;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+main .content button{
+   margin-top: 20px;
+   padding: 10px 20px;
+   font-size: 18px;
+   border: none;
+   border-radius: 7px;
+   font-family: sans-serif;
+   font-weight: 530;
+   background-color: #fff;
+   transition: all 0.2s linear;
+   cursor: pointer;
+}
+main .content button:hover{
+    color: rgb(19, 71, 92);
+    background-color:transparent;
+    font-size: 20px;
+    font-weight: 600;
+}
+main .content .media-icons{
+    margin-top: 10px;
+}
+main .content .media-icons a{
+   font-size: 25px;
+    margin: 10px;
+    color: #fff;
+}
+
+/*============= Header End ==========  */
+
+/* ====== Main Start ======== */
+
+.main{
+    background-image: url('./images/artur-solarz-hOLMEKvIBvI-unsplash.jpg');
+    height: 100vh;
+    text-align: center;
+}
+h1{
+    letter-spacing: 2px;
+    font-size: 30px;
+    font-family: sans-serif;
+    position: relative;
+    color: crimson;
+    /* margin-top: 50px; */
+    text-align: center;
+}
+h1::before{
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    width: 150px;
+    height: 4px;
+    background: crimson;
+    transform: translateX(-50%);
+}
+h1::after{
+    content: '';
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: crimson;
+    transform: translateX(50%);
+    animation: animationForH 1s infinite;
+}
+/* Animation for h1:after */
+@keyframes animationForH {
+    0%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(-10%);
+    }
+    20%{
+        transform: translateX(-20%);
+    }
+    35%{
+        transform: translateX(-35%);
+    }
+    50%{
+        transform: translateX(50%);
+    }
+    75%{
+        transform: translateX(40%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.main .contant{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+}
+.main .contant .col-1{
+    position: relative;
+    width: 45%;
+    overflow: hidden;
+}
+.main .contant .col-1 .img-title{
+    width: 100%;
+    position: relative;
+    min-height: 450px;
+}
+.main .contant .col-1 .img-title img{
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.main .contant .col-2{
+    position: relative;
+    width: 45%;
+}
+.main .contant .col-2 .about_title{
+    margin-top: 20px;
+}
+.main .contant .col-2 .about_title h2{
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.main .contant .col-2 .about_title p{
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: start;
+}
+.main .contant .col-2 .about_title button{
+    margin-top: 50px;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #111;
+    background-color: #fff;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+}
+.main .contant .col-2 .about_title button:hover{
+    background-color: #111;
+    color: #fff;
+}
+/* ======= Media for MainClass */
+@media screen and (max-width: 850px){
+    .main .contant .col-1{
+        position: relative;
+        width: 90%;
+        overflow: hidden;
+    }
+    .main .contant .col-2 .about_title button{
+        display: none;
+    }
+}
+.Skills{
+    background-image: url('./images/josh-rose-trYl7JYATH0-unsplash.jpg');
+    height: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.Skills .content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #fff;
+    margin-top: 50px;
+}
+.Skills .content .col-left{
+    position: relative;
+    width: 45%;
+    margin-top: 30px;
+}
+.Skills .content .col-left h2{
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+.Skills .content .col-left p{
+    text-align: start;
+    margin-top: 15px;
+    margin-left: 30px;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+.Skills .content .col-left button{
+    margin-top: 20px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #050505;
+    transition: all 0.3s linear;
+}
+.Skills .content .col-left button:hover{
+    background-color: #050505;
+    color: #fff;
+}
+.Skills .content .col-right{
+    width: 45%;
+    position: relative;
+}
+.Skills .content .col-right .bar{
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.Skills .content .col-right .bar .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.Skills .content .col-right .bar .info span{
+    font-size: 18px;
+    font-weight: 600;
+}
+.Skills .content .col-right .bar .line{
+    position: relative;
+    width: 100%;
+    height: 15px;
+    background: #ccc;
+    border-radius: 3px;
+}
+.Skills .content .col-right .bar .line::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    height: 100%;
+}
+.html::before{
+    width: 92%;
+    background-color: aqua;
+}
+.css::before{
+    width: 84%;
+    background-color: rgb(73, 20, 220);
+}
+.javascript::before{
+    width: 86%;
+    background-color: rgb(221, 77, 20);
+}
+.jquery::before{
+    width: 76%;
+    background-color: rgb(211, 16, 162);
+}
+.react::before{
+    width: 70%;
+    background-color: rgb(148, 9, 212);
+}
+/* ==========Media for AboutMySelf */
+
+@media screen and (max-width: 911px) {
+    .Skills .content .col-left{
+        position: relative;
+        width: 90%;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .Skills .content .col-right{
+        width: 90%;
+        position: relative;
+    }
+    .Skills .content{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        color: #fff;
+        margin-top: 50px;
+    }
+}
+/* =======Service Begin */
+.service{
+    width: 100%;
+    position: relative;
+    background-image: url('./images/jj-ying-7JX0-bfiuxQ-unsplash.jpg');
+    height: 100%;
+}
+.service .text_title{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.service .text_title h1{
+    margin-top: 20px;
+}
+.service .text_title p{
+    text-align: center;
+    margin: 50px 10px 30px 30px;
+    font-size: 18px;
+    color: #000016;
+    letter-spacing: 1px;
+    font-weight: 550;
+}
+.service .content{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+} 
+.service .content .card{
+    width: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    transition: all 0.3s linear;
+    border-radius: 8px;
+}
+.service .content .card .service-icon1{
+    color: crimson;
+    font-size: 120px;
+    text-align: center;
+    transition: all 0.4s linear;
+
+}
+.service .content .card .service-icon2{
+    color: rgb(11, 132, 189);
+    font-size: 120px;
+    text-align: center;
+    transition: all 0.4s linear;
+}
+.service .content .card .service-icon3:hover{
+    transform: scale(1.1);
+
+}
+.service .content .card .service-icon2:hover{
+    transform: scale(1.1);
+
+}
+.service .content .card .service-icon1:hover{
+    transform: scale(1.1);
+
+}
+.service .content .card .service-icon3{
+    color: rgb(231, 217, 15);
+    font-size: 120px;
+    text-align: center;
+    transition: all 0.4s linear;
+
+}
+.service .content .card .info{
+    text-align: center;
+}
+.service .content .card .info h3{
+    font-size: 26px;
+    font-weight: 600;
+    margin: 10px;
+}
+.service .content .card .info p{
+    text-align: center;
+    font-size: 15px;
+    margin: 15px;
+    letter-spacing: 1px;
+}
+.service .content .card:hover{
+    box-shadow: 0px 5px 20px rgb(37, 34, 34);
+}
+/* work Begins */
+
+.work{
+    background-image: url('./images/nick-nice-gPm8h3DS1s4-unsplash.jpg');
+    background-position: center;
+    margin-top: 50px;
+}
+.work_title{
+    padding-top: 40px;
+    text-align: center;
+}
+.work .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 30px;
+}
+.work .content .card{
+    width: 340px;
+    margin: 15px;
+}
+.work .content .card .card-img{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 260px;
+}
+.work .content .card .card-img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+}
+.work .content .card .card-img img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.work .btn_reveal {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+   padding-bottom: 40px; 
+}
+.work .btn_reveal button a{
+    text-decoration: none;
+    color: #fff;
+}
+.work .btn_reveal button{
+   margin-top: 10px;
+   border: none;
+   border-radius: 5px;
+   padding: 7px 10px;
+   background-color: crimson;
+   cursor: pointer;
+   font-size: 14px;
+   letter-spacing: 1.5px;
+   animation: btn_anim 3s linear infinite;
+}
+/* btn_animation */
+@keyframes btn_anim {
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(0.9);
+        background-color: #fff;
+        color: #000016;
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.1);
+        background-color: #000016;
+        padding: 8px 12px;
+    }
+    100%{
+        transform: scale(1);
+        background-color: #fff;
+        color: #000016;
+    }
+}
+/* ======== Contact Start ========== */
+.contact{
+    margin-top: 30px;
+}    
+.contact .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.contact .content .row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.contact .content .row .card{
+    background: #fff;
+    width: 240px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0px 3px 12px rgb(19, 71, 92);
+    border-radius: 10px;
+}
+.contact .content .row .card .contact_icon{
+    text-align: center;
+    font-size: 40px;
+    color: crimson;
+    transition: all 0.3s linear;
+}
+.contact .content .row .card .contact_icon:hover{
+    transform: translateY(-20%);
+}
+.contact .content .row .card .info h3{
+    text-align: center;
+    font-size: 20px;
+    margin: 10px;
+    font-weight: 700;
+}
+.contact .content .row .card p{
+    font-weight: 600;
+    color: #666;
+}
+.contact .content .contact-form{
+    background: #fff;
+    max-width: 600px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 12px rgb(19, 71, 92);
+
+}
+.contact .content .contact-form h3{
+    color: #111;
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
+    margin-top: 40px;
+}
+.contact .content .contact-form  .input-box{
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact .content .contact-form  .input-box textarea{
+    padding: 10px;
+    color: #111;
+    resize: none;
+    border: 1px solid #111;
+    border-radius: 8px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 10px;
+    width: 90%;
+}
+.contact .content .contact-form  .input-box button{
+    width: 90%;
+    height: 40px;
+    background-color: rgb(20, 213, 220);
+    border: none;
+    border-radius: 5px;
+}
+.contact .content .contact-form  .input-box button a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+.contact .content .contact-form  .input-box form{
+    position: relative;
+    width: 90%; 
+    margin-top: 20px;
+    overflow: hidden;
+    height: 50px;
+    
+}
+.contact .content .contact-form  .input-box form input{
+    position: absolute;
+    border: none;
+    padding-top: 12px;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    color: rgb(15, 142, 151);
+}
+.contact .content .contact-form  .input-box form label{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: 1px solid;
+}
+.contact .content .contact-form  .input-box form label::after{
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    border: 2px solid #0d7a7a;
+    width: 100%;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.4s linear;
+}
+.contact .content .contact-form  .input-box form label .c-label{
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: all 0.3s linear;
+    font-size: 15px;
+}
+.contact .content .contact-form  .input-box form input:focus + label .c-label,
+.contact .content .contact-form  .input-box form input:valid + label .c-label
+{
+    transform: translateY(-120%);
+    color: #0d7a7a;
+    font-size: 16px;
+}
+.contact .content .contact-form  .input-box form input:focus + label::after,
+.contact .content .contact-form  .input-box form input:valid + label::after
+{
+    transform: translateX(0);
+}
+/* ============Footer Begins=========== */
+ .footer{
+    background-image: url('./images/toa-heftiba-DUXACn8tgp4-unsplash.jpg');
+    background-position: center;
+     width: 100%;
+     height: 150px;
+     margin-top: 60px;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+ }
+ .footer h3{
+     color: #fff;
+     padding: 10px;
+ }
+ .footer p{
+     color: #fff;
+ }
+ /*  ======== WebKit Begins */
+ ::-webkit-scrollbar{
+     width: 13px;
+ }
+ ::-webkit-scrollbar-track{
+    background: #ccc;
+ }
+ ::-webkit-scrollbar-thumb{
+     text-align: center;
+     border-radius: 5px;
+     width: 13px;
+     height: 150px;
+     background: linear-gradient(45deg, rgb(49, 174, 196), #e2e2eb, #00fff2);
+ }
+ 
